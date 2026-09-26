@@ -30,11 +30,10 @@ fullscreen = 1
 # icon.filename = %(source.dir)s/icon.png
 # presplash.filename = %(source.dir)s/presplash.png
 
-[buildozer]
-
-log_level = 2
-
-[app:android]
+# ВАЖНО: секции [app:android] в формате buildozer.spec не существует —
+# buildozer читает android.* ключи ТОЛЬКО из [app]. Раньше они лежали в
+# несуществующей секции [app:android] и тихо игнорировались, из-за чего
+# сборка откатывалась на дефолт (в т.ч. на две архитектуры вместо одной).
 
 # Минимальная и целевая версия Android API
 android.minapi = 24
@@ -49,3 +48,7 @@ android.permissions = CAMERA, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION
 
 # Явно указываем, что приложению нужна камера
 android.features = android.hardware.camera, android.hardware.camera.autofocus
+
+[buildozer]
+
+log_level = 2
