@@ -323,7 +323,7 @@ class ApocalypseReticleLayout(FloatLayout):
         self.pr_button.pos = (self.width - self.pr_button.width - margin, margin)
 
     def open_pr_link(self):
-        url = "https://vk.cc/d2hyAP"
+        url = "https://max.ru/channel_megatronik"
         try:
             if ANDROID_SENSORS_AVAILABLE and platform == 'android':
                 Intent = autoclass('android.content.Intent')
